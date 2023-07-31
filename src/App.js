@@ -3,12 +3,12 @@ import './App.css';
 import MyAuth from './Components/MyAuth';
 import Chat from './Components/Chat';
 import Cookies from 'universal-cookie';
-const cookie = new Cookies() 
+const cookie = new Cookies();
 
 function App() {
   // if isAUth is true then enter the chat room
   const [isAuth, setIsAuth] = useState(cookie.get("authToken"));
-  const [room, setRoom] = useState(null)
+  const [room, setRoom] = useState(null);
   //to get value of input only after clicking button, otherwise after writning single word setRoom will be true and it will disappear
   //to let the client enter complete name of chat room and then go to chat
   const roomRef = useRef(null);
@@ -16,7 +16,6 @@ function App() {
   if (!isAuth) {
     return (
       <div className="App">
-        <h1>Hello Its me</h1>
         <MyAuth setIsAuth={setIsAuth}/>
       </div>
     );
@@ -24,7 +23,7 @@ function App() {
     return (
       <div className="App">
         {room ? (
-          <Chat/>
+          <Chat room={room}/>
         ) : (
           <div className='room'>
             <label htmlFor="roomName">Enter Room Name</label>
