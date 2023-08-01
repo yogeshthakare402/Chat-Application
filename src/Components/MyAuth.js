@@ -20,8 +20,8 @@ function MyAuth({setIsAuth}) {
 
   return (
     <div className='auth'>
-        <p> Sign In with Google To Continue</p>
-        <button onClick={signInWithGoogle}>Sign In With Google</button>
+        <h4> Sign In with Google To Continue</h4>
+        <button type='button' className='btn btn-outline-primary mt-5' onClick={signInWithGoogle}>Sign In With Google</button>
     </div>
   )
 }

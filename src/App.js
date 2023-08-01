@@ -15,20 +15,20 @@ function App() {
 
   if (!isAuth) {
     return (
-      <div className="App">
+      <div className="container border rounded App">
         <MyAuth setIsAuth={setIsAuth}/>
       </div>
     );
   } else {
     return (
-      <div className="App">
+      <div className="container border rounded App">
         {room ? (
           <Chat room={room}/>
         ) : (
-          <div className='room'>
-            <label htmlFor="roomName">Enter Room Name</label>
-            <input type="text" id='roomName' ref={roomRef}/>
-            <button onClick={()=>setRoom(roomRef.current.value)}>Enter Chat</button>
+          <div className='d-flex flex-column justify-content-center rounded room'>
+            <label htmlFor="roomName"><p>Enter Room Name To Continue</p></label>
+            <input type="text" id='roomName' ref={roomRef} className='mt-3 border-secondary rounded'/>
+            <button type='button' className='btn btn-lg btn-outline-primary mt-4' onClick={()=>setRoom(roomRef.current.value)}>Enter Chat</button>
           </div>
         )}
       </div>
