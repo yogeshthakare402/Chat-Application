@@ -27,7 +27,7 @@ function App() {
         ) : (
           <div className='d-flex flex-column justify-content-center rounded room'>
             <label htmlFor="roomName"><p>Enter Room Name To Continue</p></label>
-            <input type="text" id='roomName' ref={roomRef} className='mt-3 border-secondary rounded'/>
+            <input type="text" id='roomName' ref={roomRef}  style={{color:"black"}} className='mt-3 border-secondary rounded'/>
             <button type='button' className='btn btn-lg btn-outline-primary mt-4' onClick={()=>setRoom(roomRef.current.value)}>Enter Chat</button>
           </div>
         )}
