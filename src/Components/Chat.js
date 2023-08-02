@@ -62,7 +62,10 @@ function Chat({ room }) {
         })}
       </div>
       <form className='d-flex flex-row newmsgForm' onSubmit={handleSubmit}>
-          <input type="text" className='rounded new-message-input' placeholder='Type your message here' value={newMassage} onChange={(e) => setNewMessage(e.target.value)} />
+          <input type="text" className='rounded new-message-input' placeholder='Type your message here' 
+          style={{color:"black"}}
+          value={newMassage} 
+          onChange={(e) => setNewMessage(e.target.value)} />
           <button type='submit' className='btn btn-outline-primary send-button'><VscSend/></button>
       </form>
       <button type='button' className='btn btn-primary disabledBtn' disabled></button>
